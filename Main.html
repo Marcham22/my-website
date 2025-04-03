@@ -1,0 +1,144 @@
+<style>
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+  padding: 100px 20px;
+  background-color: #1a1a1a; 
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+}
+
+  
+  /* Hero Section */
+  .hero {
+    padding: 100px 20px;
+    position: relative;
+    color: rgb(250, 250, 250);
+    text-align: center;
+    width: vw;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  
+  /* Features Section */
+  .features-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80vh;
+  }
+  
+  /* Grid Layout for Features */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+  }
+  
+  /* Individual Feature Item */
+  .feature-item {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .feature-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image within the Feature */
+  .feature-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feature-box img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Button Style */
+  .btn {
+    background-color: #3b82f6;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: inline-block;
+  }
+  
+  .btn:hover {
+    background-color: #2563eb;
+  }
+</style>
+
+<article>
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-banner"></div>
+  </div>
+</section>
+
+<!-- Features Section (Apps) -->
+<section id="features" class="features-container">
+  <div class="features">
+    <!-- Hello World App -->
+    <div class="feature-item">
+      <a href="helloworldapp.html" class="feature-box">
+        <img src="helloworlddd.jfif" alt="Hello World App">
+      </a>
+      <a href="helloworldapp.html" class="btn">Hello World App</a>
+    </div>
+
+    <!-- To-Do App -->
+    <div class="feature-item">
+      <a href="todoapp.html" class="feature-box">
+        <img src="todo.jfif" alt="To-Do App">
+      </a>
+      <a href="todoapp.html" class="btn">To-Do App</a>
+    </div>
+
+    <!-- Quiz Recorder App -->
+    <div class="feature-item">
+      <a href="quizrecorderapp.html" class="feature-box">
+        <img src="quiz recorder.jfif" alt="Quiz Recorder App">
+      </a>
+      <a href="quizrecorderapp.html" class="btn">Quiz Recorder App</a>
+    </div>
+
+    <!-- Firebase App -->
+    <div class="feature-item">
+      <a href="firebaseapp.html" class="feature-box">
+        <img src="firebase.jfif" alt="Firebase App">
+      </a>
+      <a href="firebaseapp.html" class="btn">Firebase App</a>
+    </div>
+  </div>
+</section>
+</article>
+
+<script>
+// JavaScript to show the feature section when "Explore My Work" button is clicked
+document.getElementById('exploreBtn').addEventListener('click', function (e) {
+  e.preventDefault();  // Prevent the default anchor link behavior
+  document.getElementById('features').style.display = 'flex'; // Show the features section
+});
+</script>
